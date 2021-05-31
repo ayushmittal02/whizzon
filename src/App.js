@@ -7,6 +7,31 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import { Component } from 'react';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
+import Particles from 'react-particles-js';
+
+const particleOptions = {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "line_linked": {
+      "width": 2
+    }
+  },
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      }
+    }
+  }
+}
 
 const initialState = {
   input: '',
@@ -105,6 +130,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Particles className='particles' params={particleOptions} />
         <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} />
         {this.state.route === 'home'
           ? <div>
