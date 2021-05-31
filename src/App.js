@@ -12,7 +12,7 @@ import Particles from 'react-particles-js';
 const particleOptions = {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 90,
       "density": {
         "enable": true,
         "value_area": 800
@@ -20,7 +20,11 @@ const particleOptions = {
     },
     "line_linked": {
       "width": 2
-    }
+    },
+    "move": {
+      "enable": true,
+      "speed": 1
+    },
   },
   "interactivity": {
     "detect_on": "window",
